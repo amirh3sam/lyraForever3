@@ -3,8 +3,8 @@ Feature: As a data consumer, I want the user information are stored in mySql DB 
     Given Establish the database connection
   @us01 @db
   Scenario: verify users has unique IDs
-    When Execute query to get all IDs from users_AS
-    Then verify all users has unique ID_AS
+    When Execute query to get all IDs from users
+    Then verify all users has unique ID
 
 
   Scenario: verify users table columns
