@@ -4,16 +4,16 @@ Feature: Books module
 
   Scenario Outline: Verify added book is matching with DB
     Given the "librarian" on the home page
-    And the user navigates to "Books" page
-    When the librarian click to add book
-    And the librarian enter book name "<Book Name>"
-    When the librarian enter ISBN "<ISBN>"
-    And the librarian enter year "<Year>"
-    When the librarian enter author "<Author>"
-    And the librarian choose the book category "<Book Category>"
-    And the librarian click to save changes
-    Then verify "The book has been created" message is displayed
-    And verify "<Book Name>" information must match with DB
+    And the user navigates to "Books" page_AA
+    When the librarian click to add book_AA
+    And the librarian enter book name "<Book Name>"_AA
+    When the librarian enter ISBN "<ISBN>"_AA
+    And the librarian enter year "<Year>"_AA
+    When the librarian enter author "<Author>"_AA
+    And the librarian choose the book category "<Book Category>"_AA
+    And the librarian click to save changes_AA
+    Then verify "The book has been created" message is displayed_AA
+    And verify "<Book Name>" information must match with DB_AA
     Examples:
       | Book Name             | ISBN     | Year | Author          | Book Category        |
       | Head First Java       | 10112021 | 2021 | Kathy Sierra    | Action and Adventure |
