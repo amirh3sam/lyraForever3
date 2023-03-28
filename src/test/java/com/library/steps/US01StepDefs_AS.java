@@ -6,8 +6,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.List;
+
 public class US01StepDefs_AS {
     String actualUserCount;
+    List<String> actualColumns;
 
     @Given("Establish the database connection")
     public void establishTheDatabaseConnection() {
@@ -42,5 +45,22 @@ public class US01StepDefs_AS {
         System.out.println("**********************************************");
         System.out.println("*** DESTROY  WILL BE DONE WITH HOOK CLASS***");
         System.out.println("**********************************************");
+
+
+        }
+
+    @When("Execute query to get all columns_AS")
+    public void execute_query_to_get_all_columns_as() {
+        String query = "Select * from users";
+        DB_Util.runQuery(query);
+        actualColumns = DB_Util.getAllColumnNamesAsList();
+
     }
-}
+    @Then("verify the below columns are listed in result_AS")
+    public void verify_the_below_columns_are_listed_in_result_as(List<String> expectedColumnNames) {
+        Assert.assertEquals(expectedColumnNames, actualColumns);
+
+    }
+
+    }
+
