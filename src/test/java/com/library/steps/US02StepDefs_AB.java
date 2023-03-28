@@ -2,7 +2,6 @@ package com.library.steps;
 
 import com.library.pages.DashBoardPage;
 import com.library.pages.LoginPage;
-import com.library.utility.BrowserUtil;
 import com.library.utility.DB_Util;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
