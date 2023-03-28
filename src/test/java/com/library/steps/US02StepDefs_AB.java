@@ -12,18 +12,18 @@ public class US02StepDefs_AB {
     String ActualBooksBorrowed;
     LoginPage loginPage = new LoginPage();
     DashBoardPage dashBoardPage =new DashBoardPage();
-    @Given("the {string} on (.*?) the home page")
+    @Given("the {string} on the home page_AB")
     public void the_on_the_home_page(String user) {
         loginPage.login(user);
         BrowserUtil.waitFor(4);
     }
-    @When("the librarian gets (.*?) borrowed books number")
+    @When("the librarian gets borrowed books number_AB")
     public void the_librarian_gets_borrowed_books_number() {
         ActualBooksBorrowed = dashBoardPage.borrowedBooksNumber.getText();
         System.out.println(ActualBooksBorrowed);
 
     }
-    @Then("borrowed books number (.*?) information must match with DB")
+    @Then("borrowed books number information must match with DB_AB")
     public void borrowed_books_number_information_must_match_with_db() {
 
         DB_Util.runQuery("select count(*) from book_borrow where is_returned =0");
