@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         glue = "com/library/steps",
         dryRun = false,
 
-        tags = ""
+        tags = "@viki"
 
 )
 public class CukesRunner {
