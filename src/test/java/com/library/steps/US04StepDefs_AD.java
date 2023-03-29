@@ -38,4 +38,16 @@ public class US04StepDefs_AD {
 
 
     }
+    @Then("should not be able to see the book information_AD")
+    public void shouldNotBeAbleToSeeTheBookInformation_AD() {
+
+        String Query ="SELECT * FROM books where name = 'LyraBook'";
+        DB_Util.runQuery(Query);
+        BrowserUtil.waitFor(1);
+
+        Assert.assertFalse(bookName.equals(DB_Util.getCellValue(1, 2)));
+
+
+
+    }
 }
