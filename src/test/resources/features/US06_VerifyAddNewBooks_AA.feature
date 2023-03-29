@@ -1,7 +1,8 @@
+@B28G27-136
 Feature: Books module
   As a librarian, I should be able to add new book into library
 
-  @us06 @ui @db
+  @B28G27-143 @us06 @ui @db
   Scenario Outline: Verify added book is matching with DB
     Given the "librarian" on the home page
     And the user navigates to "Books" page_AA
