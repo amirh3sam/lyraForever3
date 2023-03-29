@@ -47,4 +47,4 @@ where full_name='Test Student 5'
 order by 3 desc;
 
 
-select
+
